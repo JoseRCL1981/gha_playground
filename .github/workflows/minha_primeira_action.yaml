@@ -15,8 +15,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo "📅 Data e hora atual: date '+%d/%m/%Y %H:%M:%S'"
-
+      - run: echo 📅 Data e hora atual: $(date +'%d/%m/%Y %H:%M:%S')
+      
+      - run: ls -la 
+      
       - uses: actions/checkout@v6
 
       - run: ls -la 
