@@ -13,5 +13,5 @@ jobs:
 
   meu-segundo-job:
     steps:
-      echo "📅 Data e hora atual $(date):"
+      - run: echo "📅 Data e hora atual $(date):"
           
