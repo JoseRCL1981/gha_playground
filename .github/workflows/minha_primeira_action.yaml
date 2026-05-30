@@ -14,7 +14,7 @@ jobs:
       - name: Primeiro Step
         run: |
           echo " 🎉​ The job was automatically triggered by a event."
-          echo " 🐧 ​job está rodando em um servidor hospedado pelo GitHub"
+          echo " 🐧 job está rodando em um servidor hospedado pelo GitHub"
           ls -la
       - name: Git checkout (faz o clone do repo)
         uses: actions/checkout@v6
