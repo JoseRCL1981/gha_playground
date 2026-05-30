@@ -31,6 +31,6 @@ jobs:
           echo "Meu repositorio se chama: ${{github.repository}}"
         run: ls -la 
       
-        uses: actions/checkout@v6
+      - uses: actions/checkout@v6
 
         run: ls -la 
