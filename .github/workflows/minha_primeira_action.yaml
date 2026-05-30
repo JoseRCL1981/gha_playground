@@ -1,3 +1,6 @@
+name: "[AUTOMATICA] Meu prmeiro actions"
+
+
 on:
   push:
     branches:
@@ -8,15 +11,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo " 🎉​ The job was automatically triggered by a event."
-      - run: echo " 🐧 ​job está rodando em um servidor hospedado pelo GitHub"
+      - name: Primeiro Step
+        run: |
+          echo " 🎉​ The job was automatically triggered by a event."
+          echo " 🐧 ​job está rodando em um servidor hospedado pelo GitHub"
+          ls -la
+      - name: Git checkout (faz o clone do repo)
+        uses: actions/checkout@v6
+      - name: "Verifica se o repo foi baixado"
+        runs: ls -la
 
   meu-segundo-job:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Segundo Step
       - run: echo 📅 Data e hora atual $(TZ='America/Sao_Paulo' date +'%d/%m/%Y %H:%M:%S')
-      
+             echo "Meu repositorio se chama: ${{github.repository}}"
       - run: ls -la 
       
       - uses: actions/checkout@v6
